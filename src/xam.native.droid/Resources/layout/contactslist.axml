@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+	<mvvmcross.droid.support.v7.recyclerview.MvxRecyclerView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		local:MvxItemTemplate="@layout/contactlistitem"
+		local:MvxBind="ItemsSource PropertyContacts"
+		android:clickable="false"		
+		android:layout_margin="2dp" />
+    <android.support.design.widget.FloatingActionButton		
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"        
+        android:src=""
+		app:useCompatPadding="true"
+        local:MvxBind="Click AddContactCommand"        
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+</FrameLayout>

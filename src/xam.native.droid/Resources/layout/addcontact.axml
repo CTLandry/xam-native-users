@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<TextView		
+	 android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+	 android:textColor="@android:color/holo_red_dark"
+	 local:MvxBind="Text PropertyError"
+	 android:layout_gravity="top|center"/>	
+	<EditText     
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+	 local:MvxBind="Text PropertyNewUser.UserFullName"
+	 android:hint="Enter Full Name"
+     android:inputType="text"/>
+	<EditText     
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+	 local:MvxBind="Text PropertyNewUser.UserPassword"
+	 android:hint="Enter Password"
+     android:inputType="textPassword"/>
+	<Button
+	 android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+	 local:MvxBind="Click SaveUserCommand" 
+	 android:text="Save" />
+	<TextView		
+	 android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+	 android:textColor="@color/material_blue_grey_800"
+	 android:text="Password must contain one letter, one number, no special characters and cannot have repeating letters or numbers"
+	 android:layout_gravity="bottom|center"/>
+
+</LinearLayout>

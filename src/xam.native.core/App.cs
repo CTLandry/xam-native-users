@@ -1,14 +1,15 @@
 ﻿using MvvmCross.IoC;
 using MvvmCross.ViewModels;
-using xam.native.core.ViewModels;
-using System;
-using MvvmCross.Navigation;
 using xam.native.core.Helpers;
+using xam.native.core.ViewModels;
 
 namespace xam.native.core
 {
     public class App : MvxApplication
     {
+        /// <summary>
+        /// App Entry Point. Start app and register DI via MVVMCross.
+        /// </summary>
         public App()
         {
             try
@@ -17,6 +18,8 @@ namespace xam.native.core
              .EndingWith("Service")
              .AsInterfaces()
              .RegisterAsLazySingleton();
+
+              RegisterAppStart<ContactListViewModel>();
             }
             catch (System.Exception ex)
             {
