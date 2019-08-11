@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xam.native.droid", "..\xam.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xam.native.core", "xam.native.core.csproj", "{3651BBEC-6539-4432-B655-65BAAA073910}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xam.native.ios", "..\xam.native.ios\xam.native.ios.csproj", "{1A9952D1-03E6-4F7B-A3ED-8738ADC9AB74}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -41,17 +39,5 @@ Global
 		{3651BBEC-6539-4432-B655-65BAAA073910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3651BBEC-6539-4432-B655-65BAAA073910}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3651BBEC-6539-4432-B655-65BAAA073910}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A9952D1-03E6-4F7B-A3ED-8738ADC9AB74}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
-		{1A9952D1-03E6-4F7B-A3ED-8738ADC9AB74}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{1A9952D1-03E6-4F7B-A3ED-8738ADC9AB74}.Release|iPhone.ActiveCfg = Release|iPhone
-		{1A9952D1-03E6-4F7B-A3ED-8738ADC9AB74}.Release|iPhone.Build.0 = Release|iPhone
-		{1A9952D1-03E6-4F7B-A3ED-8738ADC9AB74}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
-		{1A9952D1-03E6-4F7B-A3ED-8738ADC9AB74}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-		{1A9952D1-03E6-4F7B-A3ED-8738ADC9AB74}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{1A9952D1-03E6-4F7B-A3ED-8738ADC9AB74}.Debug|iPhone.Build.0 = Debug|iPhone
-		{1A9952D1-03E6-4F7B-A3ED-8738ADC9AB74}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{1A9952D1-03E6-4F7B-A3ED-8738ADC9AB74}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
-		{1A9952D1-03E6-4F7B-A3ED-8738ADC9AB74}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
-		{1A9952D1-03E6-4F7B-A3ED-8738ADC9AB74}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 EndGlobal
