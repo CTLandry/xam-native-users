@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MvvmCross.Commands;
@@ -29,14 +28,14 @@ namespace xam.native.core.ViewModels
             this.NavigationService = NavigationService;
             this.ContactService = ContactService;
 
-            
+
         }
 
         public override async Task Initialize()
         {
             await base.Initialize();
 
-            if (PropertyContacts == null
+            if (PropertyContacts == null)
                 await LoadContacts();
         }
 
@@ -46,11 +45,11 @@ namespace xam.native.core.ViewModels
             {
                 PropertyContacts = new MvxObservableCollection<IContact>(await ContactService.LoadContacts());
             }
-            catch(SystemException ex)
+            catch (SystemException ex)
             {
                 ErrorHandler.OutPutErrorToConsole(ex);
             }
-           
+
         }
 
         private ICommand addContactCommand;
@@ -67,7 +66,16 @@ namespace xam.native.core.ViewModels
         {
             try
             {
-                await NavigationService.Navigate<AddContactViewModel>();
+
+                var newlyAddedContact = await NavigationService.Navigate<AddContactViewModel, IContact, ContactModel>
+                                               (new ContactModel());
+
+                if (newlyAddedContact != null)
+                {
+                    await ContactService.AddContact(newlyAddedContact);
+                    await LoadContacts();
+                }
+                   
             }
             catch (Exception ex)
             {

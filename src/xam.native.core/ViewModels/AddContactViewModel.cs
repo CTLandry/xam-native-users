@@ -4,7 +4,7 @@ using xam.native.core.Models;
 
 namespace xam.native.core.ViewModels
 {
-    public class AddContactViewModel : MvxViewModel<IContact, IContact>
+    public class AddContactViewModel : MvxViewModel<IContact, ContactModel>
     {
         private IContact newContact;
 
