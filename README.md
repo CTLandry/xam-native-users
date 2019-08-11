@@ -13,7 +13,10 @@
 ## Dependencies
 
 - MVVMCross
-- Xamarin.Essentials
-- sql-lite
+- sql-net-pcl
+
+# iOS
+
+Dropped this project due to some oddities in MvvmCross 6+. All lazy registrations to the IoC container seemed not to be ready at execution. Could not find anything in the documentation that was not added already via the TipCalc example git. Changed to non lazy registration cleared up my user created services but not the internal registrations that MVVMCross usually does itself like Navigation and Cache. 
 
 
