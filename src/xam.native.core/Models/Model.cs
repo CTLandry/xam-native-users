@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 namespace xam.native.core.Models
 {
-    public abstract class Model
+    public abstract class Model : IModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

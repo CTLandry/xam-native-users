@@ -1,8 +1,8 @@
 ﻿using Android.App;
 using Android.Content.PM;
-using MvvmCross.Platforms.Android.Core;
+using Android.OS;
 using MvvmCross.Platforms.Android.Views;
-using xam.native.core;
+using xam.native.core.ViewModels;
 
 namespace xam.native.droid
 {
@@ -11,11 +11,12 @@ namespace xam.native.droid
         , MainLauncher = true
         , NoHistory = true
         , ScreenOrientation = ScreenOrientation.Portrait)]
-public class SplashActivity : MvxSplashScreenActivity<MvxAndroidSetup<App>, App>
-{
-    public SplashActivity()
-         : base(Resource.Layout.splashscreen)
+public class SplashActivity : MvxActivity<SplashViewModel>
     {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.splashscreen);
+        }
     }
-}
 }

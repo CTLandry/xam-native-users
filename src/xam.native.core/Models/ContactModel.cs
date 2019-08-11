@@ -1,10 +1,13 @@
 ﻿using System;
+using SQLite;
+
 namespace xam.native.core.Models
 {
+    [Table("Contacts")]
     public class ContactModel : Model , IContact
     {
-
-        private readonly string ContactID;
+        [PrimaryKey]
+        public string ContactID { get; }
 
         private string name;
         public string Name

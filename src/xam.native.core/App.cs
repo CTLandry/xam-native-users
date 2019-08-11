@@ -1,7 +1,11 @@
-﻿using MvvmCross.IoC;
+﻿using MvvmCross;
+using MvvmCross.IoC;
 using MvvmCross.ViewModels;
 using xam.native.core.Helpers;
+using xam.native.core.Models;
+using xam.native.core.Repositories.LocalRepository;
 using xam.native.core.ViewModels;
+using xam.native.localdatabase;
 
 namespace xam.native.core
 {
@@ -14,12 +18,16 @@ namespace xam.native.core
         {
             try
             {
-              CreatableTypes()
-             .EndingWith("Service")
-             .AsInterfaces()
-             .RegisterAsLazySingleton();
+                CreatableTypes()
+               .EndingWith("Service")
+               .AsInterfaces()
+               .RegisterAsLazySingleton();
 
-              RegisterAppStart<ContactListViewModel>();
+                Mvx.IoCProvider.RegisterSingleton<ISQLiteDatabase>(new SQLiteDatabase());
+                Mvx.IoCProvider.RegisterSingleton<ILocalRepository<ContactModel>>(new ContactsRepository());
+                
+
+                RegisterAppStart<SplashViewModel>();
             }
             catch (System.Exception ex)
             {
