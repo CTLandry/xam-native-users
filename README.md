@@ -2,7 +2,7 @@
 
 ## Architecture (MVVM)
 
-![API follows Domain Driven Design](https://media.rehansaeed.com/rehansaeed/2014/05/MVVM-1024x576.png)
+![API follows Domain Driven Design](https://www.textlocal.com/wp-content/uploads/2016/10/Textlocal-How-to-Guide-How-to-create-a-contact-list-cover.png)
 
 ## Functionality
 
@@ -13,7 +13,7 @@
 ## Dependencies
 
 - MVVMCross
-- Autofac
 - Xamarin.Essentials
+- sql-lite
 
 
