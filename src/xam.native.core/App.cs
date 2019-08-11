@@ -23,9 +23,8 @@ namespace xam.native.core
                .AsInterfaces()
                .RegisterAsLazySingleton();
 
-                Mvx.IoCProvider.RegisterSingleton<ISQLiteDatabase>(new SQLiteDatabase());
-                Mvx.IoCProvider.RegisterSingleton<ILocalRepository<ContactModel>>(new ContactsRepository());
-                
+                Mvx.IoCProvider.ConstructAndRegisterSingleton<ISQLiteDatabase<ContactModel> , GenericSQLiteDatabase<ContactModel>>();
+
 
                 RegisterAppStart<SplashViewModel>();
             }

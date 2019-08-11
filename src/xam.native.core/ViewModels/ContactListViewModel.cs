@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MvvmCross.Commands;
@@ -6,14 +7,14 @@ using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using xam.native.core.Helpers;
 using xam.native.core.Models;
-using xam.native.core.Repositories.LocalRepository;
+using xam.native.core.Services;
 
 namespace xam.native.core.ViewModels
 {
     public class ContactListViewModel : MvxViewModel
     {
         private readonly IMvxNavigationService NavigationService;
-        private readonly ILocalRepository<ContactModel> LocalRepository;
+        private readonly IContactsService ContactService;
 
         private MvxObservableCollection<IContact> contacts;
         public MvxObservableCollection<IContact> PropertyContacts
@@ -23,12 +24,33 @@ namespace xam.native.core.ViewModels
         }
 
         public ContactListViewModel(IMvxNavigationService NavigationService,
-                                    ILocalRepository<ContactModel> LocalRepository)
+                                    IContactsService ContactService)
         {
             this.NavigationService = NavigationService;
-            this.LocalRepository = LocalRepository;
+            this.ContactService = ContactService;
 
-            PropertyContacts = new MvxObservableCollection<IContact>();
+            
+        }
+
+        public override async Task Initialize()
+        {
+            await base.Initialize();
+
+            if (PropertyContacts == null
+                await LoadContacts();
+        }
+
+        private async Task LoadContacts()
+        {
+            try
+            {
+                PropertyContacts = new MvxObservableCollection<IContact>(await ContactService.LoadContacts());
+            }
+            catch(SystemException ex)
+            {
+                ErrorHandler.OutPutErrorToConsole(ex);
+            }
+           
         }
 
         private ICommand addContactCommand;
@@ -45,7 +67,7 @@ namespace xam.native.core.ViewModels
         {
             try
             {
-                
+                await NavigationService.Navigate<AddContactViewModel>();
             }
             catch (Exception ex)
             {

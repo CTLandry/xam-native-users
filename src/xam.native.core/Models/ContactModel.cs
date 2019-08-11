@@ -4,11 +4,9 @@ using SQLite;
 namespace xam.native.core.Models
 {
     [Table("Contacts")]
-    public class ContactModel : Model , IContact
+    public class ContactModel : Model , IContact, IModel
     {
-        [PrimaryKey]
-        public string ContactID { get; }
-
+        
         private string name;
         public string Name
         {
@@ -23,14 +21,13 @@ namespace xam.native.core.Models
             set { SetProperty(ref password, value); }
         }
 
-        public ContactModel()
+        public ContactModel() : base(Guid.NewGuid().ToString())
         {
-            this.ContactID = Guid.NewGuid().ToString();
+            
         }
 
-        public ContactModel(string name)
+        public ContactModel(string name) : base(Guid.NewGuid().ToString())
         {
-            this.ContactID = Guid.NewGuid().ToString();
             this.Name = name;
         }
 
