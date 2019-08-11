@@ -13,19 +13,19 @@
 	<EditText     
      android:layout_height="wrap_content"
      android:layout_width="match_parent"
-	 local:MvxBind="Text PropertyNewUser.UserFullName"
-	 android:hint="Enter Full Name"
+	 local:MvxBind="Text PropertyContact.Name"
+	 android:hint="Enter Name"
      android:inputType="text"/>
 	<EditText     
      android:layout_height="wrap_content"
      android:layout_width="match_parent"
-	 local:MvxBind="Text PropertyNewUser.UserPassword"
+	 local:MvxBind="Text PropertyContact.Password"
 	 android:hint="Enter Password"
      android:inputType="textPassword"/>
 	<Button
 	 android:layout_height="wrap_content"
      android:layout_width="match_parent"
-	 local:MvxBind="Click SaveUserCommand" 
+	 local:MvxBind="Click SaveContactCommand" 
 	 android:text="Save" />
 	<TextView		
 	 android:layout_width="wrap_content"

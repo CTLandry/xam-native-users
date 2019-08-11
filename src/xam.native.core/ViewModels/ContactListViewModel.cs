@@ -67,7 +67,7 @@ namespace xam.native.core.ViewModels
             try
             {
 
-                var newlyAddedContact = await NavigationService.Navigate<AddContactViewModel, IContact, ContactModel>
+                var newlyAddedContact = await NavigationService.Navigate<AddContactViewModel, ContactModel, ContactModel>
                                                (new ContactModel());
 
                 if (newlyAddedContact != null)

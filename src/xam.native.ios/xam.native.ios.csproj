@@ -93,9 +93,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Views\View.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

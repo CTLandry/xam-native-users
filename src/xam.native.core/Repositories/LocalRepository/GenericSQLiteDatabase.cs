@@ -39,14 +39,10 @@ namespace xam.native.core.Repositories.LocalRepository
 
         public async Task SaveDataAsync(T instance)
         {
-            if (instance.GetModelPrimaryKey() != null)
-            {
-                 await database.UpdateAsync(instance);
-            }
-            else
-            {
-                 await database.InsertAsync(instance);
-            }
+
+
+            await database.InsertAsync(instance);
+
         }
     }
 }

@@ -5,7 +5,6 @@ using xam.native.core.Helpers;
 using xam.native.core.Models;
 using xam.native.core.Repositories.LocalRepository;
 using xam.native.core.ViewModels;
-using xam.native.localdatabase;
 
 namespace xam.native.core
 {
