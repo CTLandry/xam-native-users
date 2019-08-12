@@ -15,8 +15,14 @@
 - MVVMCross
 - sql-net-pcl
 
+# Android
+
+Implemented solution.
+
 # iOS
 
-Dropped this project due to some oddities in MvvmCross 6+. All lazy registrations to the IoC container seemed not to be ready at execution. Could not find anything in the documentation that was not added already via the TipCalc example git. Changed to non lazy registration cleared up my user created services but not the internal registrations that MVVMCross usually does itself like Navigation and Cache. 
+The requirements were for only one platform but to implment the same solution for iOS should be as simple as adding a reference to core, mvvmcross and adding a few view controllers. The only part of the solution that is not contained in core are the UI's.
+
+
 
 
