@@ -2,7 +2,7 @@
 
 ## Architecture (MVVM)
 
-![API follows Domain Driven Design]("https://findicons.com/files/icons/1035/human_o2/128/user_group_new.png")
+![API follows Domain Driven Design]("http://www.iconninja.com/files/980/791/645/add-group-new-user-icon.png")
 
 ## Functionality
 
