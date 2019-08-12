@@ -2,7 +2,7 @@
 
 ## Architecture (MVVM)
 
-![API follows Domain Driven Design](https://static.vecteezy.com/system/resources/previews/000/377/227/large_2x/add-user-vector-icon.jpg)
+![API follows Domain Driven Design](https://static.vecteezy.com/system/resources/previews/000/377/227/large_2x/add-user-vector-icon.jpg){:height="128px" width="128px"}
 
 ## Functionality
 
