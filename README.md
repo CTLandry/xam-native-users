@@ -4,7 +4,7 @@
 
 ## Architecture (MVVM)
 
-Follows MVVM architecture with view -> viewmodel bindings and services injected in the constructor for core functionality. 
+Follows MVVM architecture with view -> viewmodel <- model bindings and services injected in the constructor for low coupling core functionality. 
 
 ## Functionality
 
