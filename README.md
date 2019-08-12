@@ -2,7 +2,7 @@
 
 ## Architecture (MVVM)
 
-![API follows Domain Driven Design](https://www.textlocal.com/wp-content/uploads/2016/10/Textlocal-How-to-Guide-How-to-create-a-contact-list-cover.png)
+![API follows Domain Driven Design](http://www.newdesignfile.com/postpic/2011/07/iphone-contacts-app-icon_190593.jpg)
 
 ## Functionality
 
