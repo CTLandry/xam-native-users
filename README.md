@@ -1,8 +1,8 @@
 # xam-native-users
 
-## Architecture (MVVM)
+!(https://www.iconsdb.com/icons/preview/tropical-blue/add-user-2-xxl.png)
 
-![API follows Domain Driven Design](https://www.iconsdb.com/icons/preview/tropical-blue/add-user-2-xxl.png)
+## Architecture (MVVM)
 
 ## Functionality
 
