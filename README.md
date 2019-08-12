@@ -2,7 +2,7 @@
 
 ## Architecture (MVVM)
 
-![API follows Domain Driven Design]("https://www.iconsdb.com/icons/preview/tropical-blue/add-user-2-xxl.png")
+![API follows Domain Driven Design](https://www.iconsdb.com/icons/preview/tropical-blue/add-user-2-xxl.png)
 
 ## Functionality
 
