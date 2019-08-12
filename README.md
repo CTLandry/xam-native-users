@@ -1,6 +1,6 @@
 # xam-native-users
 
-!(https://www.iconsdb.com/icons/preview/tropical-blue/add-user-2-xxl.png)
+![](https://www.iconsdb.com/icons/preview/tropical-blue/add-user-2-xxl.png)
 
 ## Architecture (MVVM)
 
